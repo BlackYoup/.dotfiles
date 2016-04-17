@@ -1,0 +1,21 @@
+Config { font = "xft:helvetica:pixelsize=10"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [ Run DynNetwork ["-L","0","-H","307200","-n","green","-h","red"] 10
+       		    , Run Cpu ["-L","30","-H","50", "-l", "green", "-n","#ee9a00","--high","red"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%", "-L", "50", "-H", "70", "-l", "green", "-n", "#ee9a00", "-h", "red"] 10
+                    , Run Swap ["-L", "10", "-H", "20", "-l", "green", "-n", "#ee9a00", "-h", "red"] 10
+		    , Run BatteryP ["BAT1"]["-t", "Batt: <left>% (<timeleft>)", "-L", "10", "-H", "50", "-l", "red", "-h", "green", "-n", "#ee9a00"] 10
+		    , Run CoreTemp ["-t", "<core0>|<core1>|CG:<core2>", "-L", "40", "-H", "75", "-l", "grey90", "-n", "#ee9a00", "-h", "red"] 10
+                    , Run Com "uname" ["-s","-r"] "" 36000
+                    , Run Com "/home/arnaud/scripts/wifi.sh" [] "wifi" 10
+                    , Run Com "/home/arnaud/scripts/sound.sh" [] "sound" 10
+		    , Run Com "/home/arnaud/scripts/data.sh" [] "data" 10
+    		    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%cpu% %coretemp%| %memory% %swap% | %dynnetwork%%wifi% %data% MB %sound% - %battery%}{ <fc=#ee9a00>%date%</fc>| %uname%"
+       }
