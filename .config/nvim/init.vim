@@ -126,3 +126,8 @@ endif
 
 "let g:EclimCompletionMethod = 'omnifunc'
 source ~/.config/nvim/init.bepo.vim
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
