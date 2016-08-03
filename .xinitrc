@@ -6,4 +6,5 @@ xrandr --auto
 /usr/bin/python2.7 /home/arnaud/Dev/TraktForVLC/TraktForVLC.py --daemon
 pkttyagent --process $$ &
 syndaemon -i 1 -t -k -d
+/usr/x86_64-pc-linux-gnu/lib/xfce4/notifyd/xfce4-notifyd &
 /opt/xmonad/xmonad
