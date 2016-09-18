@@ -53,6 +53,7 @@ Plug 'ap/vim-css-color'
 Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-obsession'
 Plug 'junegunn/vim-peekaboo'
+Plug 'kelwin/vim-smali'
 
 call plug#end()
 
