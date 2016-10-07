@@ -1,0 +1,25 @@
+[alias]
+	co = checkout
+	coc = checkout -t -b
+	ap = add -p
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit
+	p = push -u
+	delc = branch -D
+	del = branch -d
+	rb = rebase -i --autostash
+	cm = commit -v
+[merge]
+	tool = vimdiff
+[git-up]
+	rebase-arguments = --preserve-merges
+[git-up "bundler"]
+	check = true
+[push]
+	default = simple
+[pager]
+	log = /usr/share/git/scripts/diff-highlight | less
+	show = /usr/share/git/scripts/diff-highlight | less
+	diff = /usr/share/git/scripts/diff-highlight | less
+
+[color]
+	ui = auto
