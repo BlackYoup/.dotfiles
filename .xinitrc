@@ -7,4 +7,4 @@ xrandr --auto
 pkttyagent --process $$ &
 syndaemon -i 1 -t -k -d
 /usr/x86_64-pc-linux-gnu/lib/xfce4/notifyd/xfce4-notifyd &
-/opt/xmonad/xmonad
+/usr/bin/i3
