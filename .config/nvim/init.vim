@@ -87,6 +87,7 @@ set t_Co=256
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_rust_src_path = '/home/arnaud/Dev/rust/src'
 
 if &term =~ '^screen' && exists('$TMUX')
   set mouse+=a
