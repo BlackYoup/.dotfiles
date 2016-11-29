@@ -32,4 +32,6 @@ if [ "$ip" != "" ]; then
   esac
 
   echo " $essid $bar"
+  echo " $essid $bar"
+  exit 0
 fi
