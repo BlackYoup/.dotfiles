@@ -1,0 +1,75 @@
+command=/usr/x86_64-pc-linux-gnu/libexec/i3blocks/$BLOCK_NAME
+
+[cpu_usage]
+command=/usr/x86_64-pc-linux-gnu/libexec/i3blocks/$BLOCK_NAME -w 30 -c 75
+align=center
+interval=2
+
+[temp 1]
+markup=pango
+align=center
+interval=5
+command=$HOME/.config/i3blocks/.bin/temp 0
+
+[temp 2]
+markup=pango
+align=center
+interval=5
+command=$HOME/.config/i3blocks/.bin/temp 1
+
+[memory]
+command=$HOME/.config/i3blocks/i3-blocks-contrib/memory
+align=center
+interval=5
+label=Mem:
+
+[wifi]
+command=$HOME/scripts/wifi.sh
+interval=2
+
+[iface]
+#instance=wlo1
+color=#00FF00
+interval=2
+
+#[iface]
+#instance=enp8s0
+#color=#00FF00
+#label=E:
+#interval=5
+#
+#[iface]
+#instance=enp0s20*
+#color=#00FF00
+#label=T:
+#interval=5
+
+[bandwidth]
+command=$HOME/.config/i3blocks/i3blocks-contrib/bandwidth2/bandwidth2 -w 307200:30720 -c 512000:51200
+interval=persist
+markup=pango
+min_width="000 kB/s"
+
+[data]
+command=$HOME/scripts/data.sh
+interval=1
+
+[sound]
+command=$HOME/scripts/sound.sh
+interval=1
+
+[batterybar]
+command=$HOME/.config/i3blocks/i3blocks-contrib/batterybar/batterybar
+label=bat:
+interval=30
+markup=pango
+min_width=bat: ■■■■■
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
+color=#ffbb00
+
+[kernel]
+command=uname -sr
+interval=3600
