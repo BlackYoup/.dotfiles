@@ -48,7 +48,7 @@ alias nvim="nvim"
 alias tmux="tmux -2"
 alias wip="git add . && git cm -m \"WIP\" --no-verify"
 alias clever="clever.js"
-alias cp='rsync -avz --progress'
+alias cp='rsync -av -zz --progress'
 
 export EDITOR="nvim"
 export JAVA_HOME=/etc/env.d/alternatives/java-jre/openjdk8-1.8/usr/x86_64-pc-linux-gnu/
