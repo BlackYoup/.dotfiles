@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec xfce4-terminal
+bindsym $mod+Shift+Return exec germinal
 
 # kill focused window
 bindsym $mod+Shift+c kill
@@ -84,7 +84,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+u focus mode_toggle
 
 # focus the parent container
 bindsym $mod+q focus parent
@@ -123,6 +123,11 @@ bindsym $mod+Shift+i restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+bindsym $mod+Shift+Prior move workspace to output left
+bindsym $mod+Shift+Next move workspace to output right
+
+bindsym $mod+i exec "gpaste-client ui"
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -147,10 +152,18 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+d mode "resize"
+
+bindsym F6 exec "amixer -q sset Master 5%-"
+bindsym F7 exec "amixer -q sset Master 5%+"
+
+new_window 1pixel
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks
+        position top
 }
+
+exec --no-startup-id /usr/libexec/gpaste/gpaste-applet
