@@ -67,7 +67,7 @@ export VDPAU_DRIVER=nouveau
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-export PATH=/home/arnaud/clevercloud/clever-tools/bin:/home/arnaud/.cabal/bin:$JAVA_HOME/bin:$GOPATH/bin:/home/arnaud/.meteor:/home/arnaud/.npm-packages/bin:/home/arnaud/.local/bin:/home/arnaud/.cabal-packages:/usr/bin:$ANDROID_HOME/tools:/opt/eclipse:/home/arnaud/.cargo/bin:$PATH
+export PATH=$PATH:/home/arnaud/clevercloud/clever-tools/bin:/home/arnaud/.cabal/bin:$JAVA_HOME/bin:$GOPATH/bin:/home/arnaud/.meteor:/home/arnaud/.npm-packages/bin:/home/arnaud/.local/bin:/home/arnaud/.cabal-packages:/usr/bin:$ANDROID_HOME/tools:/opt/eclipse:/home/arnaud/.cargo/bin
 
 #eval $(keychain --eval --agents ssh -Q --quiet ~/.ssh/*)
 
@@ -75,6 +75,7 @@ export PATH=/home/arnaud/clevercloud/clever-tools/bin:/home/arnaud/.cabal/bin:$J
 rm -rf $HOME/Desktop
 
 source ~/.nvm/nvm.sh
+source ~/.cargo/env
 
 # Some plugin made this, don't remember which one
 fpath=(/home/arnaud/.local/share/zsh/site-functions $fpath)
