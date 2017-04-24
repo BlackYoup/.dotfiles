@@ -7,7 +7,6 @@ set number
 set ruler
 set showmatch
 set noerrorbells
-set esckeys
 
 set hlsearch
 set incsearch
@@ -54,6 +53,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-obsession'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kelwin/vim-smali'
+Plug 'dleonard0/pony-vim-syntax'
 
 call plug#end()
 
