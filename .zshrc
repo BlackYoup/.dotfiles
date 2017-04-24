@@ -47,7 +47,6 @@ alias vim="nvim"
 alias nvim="nvim"
 alias tmux="tmux -2"
 alias wip="git add . && git cm -m \"WIP\" --no-verify"
-alias clever="clever.js"
 alias cp='rsync -av -zz --progress'
 
 export EDITOR="nvim"
@@ -85,3 +84,5 @@ fpath=(/home/arnaud/.local/share/zsh/site-functions $fpath)
 fpath=(/home/arnaud/.local/share/zsh/site-functions $fpath)
 fpath=(/home/arnaud/.local/share/zsh/site-functions $fpath)
 fpath=(/home/arnaud/.local/share/zsh/site-functions $fpath)
+
+source ~/scripts/format-patch.sh
