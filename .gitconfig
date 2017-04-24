@@ -7,7 +7,7 @@
 	delc = branch -D
 	del = branch -d
 	rb = rebase -i --autostash
-	cm = commit -v
+	cm = commit -v -S
 [merge]
 	tool = vimdiff
 [git-up]
@@ -23,3 +23,5 @@
 
 [color]
 	ui = auto
+[user]
+	signingkey = EF22504E9FCD46266E3ADA3B574CB857862FC595
