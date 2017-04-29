@@ -54,6 +54,7 @@ Plug 'tpope/vim-obsession'
 Plug 'junegunn/vim-peekaboo'
 Plug 'kelwin/vim-smali'
 Plug 'dleonard0/pony-vim-syntax'
+Plug 'mustache/vim-mustache-handlebars'
 
 call plug#end()
 
