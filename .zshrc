@@ -42,11 +42,11 @@ alias reboot="systemctl reboot"
 alias mysql="mysql --auto-rehash"
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
-alias npm="PYTHON=/usr/bin/python2.7 /home/arnaud/.npm-packages/bin/npm"
+alias npm="PYTHON=/usr/bin/python2.7 npm"
 alias vim="nvim"
 alias nvim="nvim"
 alias tmux="tmux -2"
-alias wip="git add . && git cm -m \"WIP\" --no-verify"
+alias wip="git add . && git commit -m \"WIP\" --no-verify"
 alias cp='rsync -av -zz --progress'
 
 export EDITOR="nvim"
