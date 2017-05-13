@@ -2,18 +2,14 @@
 
 source "$HOME/Dev/antigen/antigen.zsh"
 
-GIT_PROMPT_EXECUTABLE="haskell"
-
 source "$HOME/Dev/zsh-git-prompt/zshrc.sh"
 source /etc/profile
 
-#PROMPT='%B%m%~%b$(git_super_status) %# '
+antigen use oh-my-zsh
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
 
-antigen-use oh-my-zsh
-antigen-bundle zsh-users/zsh-syntax-highlighting
-antigen-bundle zsh-users/zsh-history-substring-search
-
-antigen-apply
+antigen apply
 PROMPT='%{$fg[cyan]%}[%*]%{$fg[green]%}[%n:%~] $(git_super_status) %{$fg[yellow]%}~ %{$fg[red]%}$ %{$reset_color%}'
 
 setopt no_share_history
