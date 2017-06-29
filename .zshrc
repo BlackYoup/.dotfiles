@@ -31,7 +31,6 @@ alias make="make -j6"
 alias gs="git status"
 alias ls="ls --color"
 alias cfx="/usr/bin/python2.7 /usr/bin/cfx"
-alias startClever="MINIFICATION_ENABLED=FALSE QUIET=TRUE ./node_modules/.bin/grunt dev"
 alias search="grep -rn --color -C 1"
 alias hibernate="sudo systemctl hibernate"
 alias reboot="systemctl reboot"
@@ -43,7 +42,7 @@ alias vim="nvim"
 alias nvim="nvim"
 alias tmux="tmux -2"
 alias wip="git add . && git commit -m \"WIP\" --no-verify"
-alias cp='rsync -av -zz --progress'
+alias cp='rsync -avc -zz --progress'
 
 export EDITOR="nvim"
 export JAVA_HOME=/etc/env.d/alternatives/java-jre/openjdk8-1.8/usr/x86_64-pc-linux-gnu/
