@@ -39,7 +39,7 @@ alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
 alias npm="PYTHON=/usr/bin/python2.7 npm"
 alias vim="nvim"
-alias nvim="nvim"
+alias vi="nvim"
 alias tmux="tmux -2"
 alias wip="git add . && git commit -m \"WIP\" --no-verify"
 alias cp='rsync -avc -zz --progress'
