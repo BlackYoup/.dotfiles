@@ -26,35 +26,24 @@ filetype off
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'scrooloose/syntastic'
 Plug 'ciaranm/detectindent'
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'pangloss/vim-javascript'
 Plug 'walm/jshint.vim'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'vim-scripts/JavaScript-Indent'
 Plug 'groenewege/vim-less'
 Plug 'wincent/command-t'
-Plug 'shime/vim-livedown'
-Plug 'majutsushi/tagbar'
-Plug 'honza/vim-snippets'
 Plug 'Valloric/YouCompleteMe'
-Plug 'kchmck/vim-coffee-script'
-Plug 'rking/ag.vim'
-Plug 'jpo/vim-railscasts-theme'
 Plug 'rust-lang/rust.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'digitaltoad/vim-jade'
 Plug 'godlygeek/tabular'
 Plug 'ap/vim-css-color'
-Plug 'leafgarland/typescript-vim'
-Plug 'tpope/vim-obsession'
 Plug 'junegunn/vim-peekaboo'
-Plug 'kelwin/vim-smali'
-Plug 'dleonard0/pony-vim-syntax'
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -76,19 +65,13 @@ au FileType xhtml,xml so ~/.vim/scripts/html_autoclosetag.vim
 " CommandT
 set wildignore+=**/.git/*,**/node_modules/*,**/bower_components/*
 
-map gm :call LivedownPreview()<CR>
-
-set rtp+=/home/arnaud/.local/lib/python3.4/site-packages/powerline/bindings/vim/
-
-" vim-airline
-set laststatus=2
-"let g:airline_powerline_fonts = 1
-set t_Co=256
-
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_rust_src_path = '/home/arnaud/Dev/rust/src'
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "dark"
 
 if &term =~ '^screen' && exists('$TMUX')
   set mouse+=a
@@ -127,7 +110,6 @@ if exists(":Tabularize")
   vmap <Leader>a: :Tabularize /:<CR>
 endif
 
-"let g:EclimCompletionMethod = 'omnifunc'
 source ~/.config/nvim/init.bepo.vim
 
 noremap <Up> <NOP>
