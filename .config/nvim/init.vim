@@ -115,3 +115,5 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+autocmd FileType rust setlocal tabstop=2 shiftwidth=2
