@@ -3,7 +3,7 @@ set shiftwidth=2
 set expandtab
 
 set mouse=a
-set number
+set number relativenumber
 set ruler
 set showmatch
 set noerrorbells
