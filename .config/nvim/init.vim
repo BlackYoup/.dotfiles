@@ -21,6 +21,8 @@ set dir=~/.config/nvim/.nvim-tmp
 syntax on
 syntax enable
 
+let g:typescript_indent_disable = 1
+
 set nocompatible
 filetype off
 
@@ -33,7 +35,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'pangloss/vim-javascript'
 Plug 'walm/jshint.vim'
 Plug 'groenewege/vim-less'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'rust-lang/rust.vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'digitaltoad/vim-jade'
@@ -43,6 +45,11 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'mhartington/nvim-typescript'
+Plug 'leafgarland/typescript-vim'
+Plug 'jason0x43/vim-js-indent'
+Plug 'sebastianmarkow/deoplete-rust'
 
 call plug#end()
 
@@ -60,9 +67,6 @@ au BufReadPost * :DetectIndent
 
 " html auto close
 au FileType xhtml,xml so ~/.vim/scripts/html_autoclosetag.vim
-
-" CommandT
-set wildignore+=**/.git/*,**/node_modules/*,**/bower_components/*
 
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
@@ -117,3 +121,10 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 autocmd FileType rust setlocal tabstop=2 shiftwidth=2
+
+let g:deoplete#enable_at_startup = 1
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+"deoplete
+let g:deoplete#sources#rust#racer_binary='/home/arnaud/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path='/home/arnaud/Dev/rust/src'
