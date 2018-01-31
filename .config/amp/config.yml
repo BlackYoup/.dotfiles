@@ -17,6 +17,8 @@ keymap:
       - "buffer::delete_token"
     w: "buffer::save"
     ctrl-r: "buffer::redo"
+    ctrl-f: "view::scroll_down"
+    ctrl-b: "view::scroll_up"
     $: "cursor::move_to_end_of_line"
     "^": "cursor::move_to_start_of_line"
     ":": "application::switch_to_command_mode"
