@@ -14,6 +14,7 @@ set ignorecase
 set smartcase
 
 set wrap
+set backupcopy=yes
 
 set swapfile
 set dir=~/.config/nvim/.nvim-tmp
