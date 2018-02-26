@@ -66,9 +66,6 @@ let g:detectindent_preferred_expandtab = 1
 let g:detectindent_preferred_indent = 2
 au BufReadPost * :DetectIndent
 
-" html auto close
-au FileType xhtml,xml so ~/.vim/scripts/html_autoclosetag.vim
-
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_seed_identifiers_with_syntax = 1
