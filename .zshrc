@@ -43,7 +43,11 @@ alias vi="nvim"
 alias tmux="tmux -2"
 alias wip="git add . && git commit -m \"WIP\" --no-verify"
 alias cp='rsync -avc -zz --progress'
+alias clever='/home/arnaud/Dev/clevercloud/clever-tools/bin/clever.js'
+alias tiny_http_server='cd /tmp && npm i express && echo "require(\"express\")().get(\"*\",(_,r)=>{\n\tr.end();\n}).listen(1026)" > http.js && node http.js'
+alias ip="ip --color"
 
+export TERM="screen"
 export EDITOR="nvim"
 export JAVA_HOME=/etc/env.d/alternatives/java-jre/openjdk8-1.8/usr/x86_64-pc-linux-gnu/
 export GOPATH=/home/arnaud/Dev/golang
