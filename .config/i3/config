@@ -156,8 +156,8 @@ mode "resize" {
 
 bindsym $mod+d mode "resize"
 
-bindsym F7 exec "amixer -q sset Master 5%-"
-bindsym F8 exec "amixer -q sset Master 5%+"
+bindsym F9 exec "amixer -D pulse sset Master 5%-"
+bindsym F10 exec "amixer -D pulse sset Master 5%+"
 
 new_window 1pixel
 
