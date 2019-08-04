@@ -4,7 +4,7 @@ format-patch(){
   local commitnbr=$1
   local name=$2
   local currentdir=${PWD##*/}
-  local autopatchpath=/etc/paludis/autopatch/${currentdir}
+  local autopatchpath=/etc/paludis/autopatch/repositories/${currentdir}
 
   if [[ ! -d "${autopatchpath}" ]]; then
     mkdir "${autopatchpath}"

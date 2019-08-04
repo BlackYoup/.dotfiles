@@ -128,7 +128,7 @@ bindsym $mod+Shift+Next move workspace to output right
 
 bindsym $mod+i exec "gpaste-client ui"
 
-bindsym $mod+l exec "/usr/bin/i3lock -i $HOME/.config/i3lock/background.png -f -c 000000 -p default"
+bindsym $mod+l exec "~/scripts/lock.sh"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

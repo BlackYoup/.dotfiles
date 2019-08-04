@@ -3,7 +3,7 @@ set shiftwidth=2
 set expandtab
 
 set mouse=a
-set number relativenumber
+set number
 set ruler
 set showmatch
 set noerrorbells
@@ -51,6 +51,8 @@ Plug 'mhartington/nvim-typescript'
 Plug 'leafgarland/typescript-vim'
 Plug 'jason0x43/vim-js-indent'
 Plug 'sebastianmarkow/deoplete-rust'
+Plug 'dleonard0/pony-vim-syntax'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
