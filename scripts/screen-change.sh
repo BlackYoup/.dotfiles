@@ -25,6 +25,7 @@ else
   if [[ "${length}" -eq 1 ]]; then
     xrandr --output "${connected_screens[0]}" --auto --above "eDP-1"
     /home/arnaud/.fehbg
+    /usr/bin/i3 workspace 2 && /usr/bin/i3 move workspace to output up
     /usr/bin/notify-send 'Screen connected!'
   else
     if [[ "${length}" -gt 1 ]]; then
