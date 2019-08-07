@@ -18,10 +18,6 @@ if [ -f ~/.dir_colors ]; then
   eval `dircolors ~/.dir_colors`
 fi
 
-if [[ -t 0 && $(tty) =~ /dev/tty ]] && ! pgrep -u $USER startx &> /dev/null;then
-  eval `ssh-agent` && startx
-fi
-
 alias sudo="sudo "
 alias halt="systemctl poweroff"
 alias lg="git lg"
@@ -43,13 +39,16 @@ alias vi="nvim"
 alias tmux="tmux -2"
 alias wip="git add . && git commit -m \"WIP\" --no-verify"
 alias cp='rsync -avc -zz --progress'
-alias clever='/home/arnaud/Dev/clevercloud/clever-tools/bin/clever.js'
-alias tiny_http_server='cd /tmp && npm i express && echo "require(\"express\")().get(\"*\",(_,r)=>{\n\tr.end();\n}).listen(1026)" > http.js && node http.js'
+#alias clever='/home/arnaud/Dev/clevercloud/clever-tools/bin/clever.js'
+alias tiny_http_server='cd /tmp && npm i express && echo "require(\"express\")().get(\"*\",(_,r)=>{\n\tconsole.log(process.env.PORT||1016);\nr.end();\n}).listen(process.env.PORT || 1026)" > http.js && node http.js'
 alias ip="ip --color"
+alias cat="bat"
+alias grep="rg"
+alias find="fd"
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 
 export TERM="screen"
 export EDITOR="nvim"
-export JAVA_HOME=/etc/env.d/alternatives/java-jre/openjdk8-1.8/usr/x86_64-pc-linux-gnu/
 export GOPATH=/home/arnaud/Dev/golang
 export GOROOT=/usr/lib/go
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -60,12 +59,14 @@ export CXX=x86_64-pc-linux-gnu-g++
 export NODE_REPL_HISTORY_FILE=/home/arnaud/.node-history
 export ANDROID_HOME=/home/arnaud/Dev/android-sdk-linux
 export VDPAU_DRIVER=nouveau
+export PATH=/home/arnaud/scripts/override-bins:$JAVA_HOME/bin:$GOPATH/bin:/home/arnaud/.cargo/bin:/home/arnaud/Dev/clevercloud/0116-scripts:$PATH
+
+if [[ -t 0 && $(tty) =~ /dev/tty ]] && ! pgrep -u $USER startx &> /dev/null;then
+  eval `ssh-agent` && startx
+fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
-
-# User specific aliases and functions
-export PATH=$PATH:/home/arnaud/clevercloud/clever-tools/bin:/home/arnaud/.cabal/bin:$JAVA_HOME/bin:$GOPATH/bin:/home/arnaud/.meteor:/home/arnaud/.global-node-packages/bin:/home/arnaud/.local/bin:/home/arnaud/.cabal-packages:/usr/bin:$ANDROID_HOME/tools:/opt/eclipse:/home/arnaud/.cargo/bin
 
 #eval $(keychain --eval --agents ssh -Q --quiet ~/.ssh/*)
 
@@ -85,3 +86,7 @@ fpath=(/home/arnaud/.local/share/zsh/site-functions $fpath)
 fpath=(/home/arnaud/.local/share/zsh/site-functions $fpath)
 
 source ~/scripts/format-patch.sh
+
+[[ -s /home/arnaud/.autojump/etc/profile.d/autojump.sh ]] && source /home/arnaud/.autojump/etc/profile.d/autojump.sh
+
+autoload -U compinit && compinit -u
