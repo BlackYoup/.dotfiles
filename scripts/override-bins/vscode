@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/home/arnaud/scripts/unset-gdk-scale.sh "/usr/bin/vscode"

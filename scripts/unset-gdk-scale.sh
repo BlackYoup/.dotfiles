@@ -13,6 +13,7 @@ if [[ "${output}" != "" ]]; then
 
   if [[ "${width}" -lt 3840 ]] && [[ "${height}" -lt 2160 ]]; then
     unset GDK_SCALE
+    unset QT_AUTO_SCREEN_SCALE_FACTOR
   fi
 fi
 
