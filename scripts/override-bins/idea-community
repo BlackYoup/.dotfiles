@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
+source /home/arnaud/Dev/clevercloud/.global.env
 /home/arnaud/scripts/unset-gdk-scale.sh "/usr/bin/idea-community"

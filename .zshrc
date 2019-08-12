@@ -90,3 +90,10 @@ source ~/scripts/format-patch.sh
 [[ -s /home/arnaud/.autojump/etc/profile.d/autojump.sh ]] && source /home/arnaud/.autojump/etc/profile.d/autojump.sh
 
 autoload -U compinit && compinit -u
+
+if [[ -n "${TMUX}" ]]; then
+  session_name=$(tmux display-message -p '#S')
+  if [[ "${session_name}" == "clevercloud" ]]; then
+    source /home/arnaud/Dev/clevercloud/.global.env
+  fi
+fi
