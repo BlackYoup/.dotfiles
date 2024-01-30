@@ -53,6 +53,7 @@ Plug 'jason0x43/vim-js-indent'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'dleonard0/pony-vim-syntax'
 Plug 'posva/vim-vue'
+Plug 'dag/vim-fish'
 
 call plug#end()
 
